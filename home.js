@@ -23,26 +23,27 @@ xhr.onreadystatechange = function(){
             document.getElementById('ul').style.marginTop = "20px";
             var promise = new Promise((resolve, reject)=>{
                 var count = 0;
-                     if($('input[type="checkbox"]').on('change')){
-                     if($(this).is('checked',true)){
-                     count = count+1;
-                     console.log(count);
-                     if(count===5){
-                         resolve();
-                     }
+            
+            $('input[type="checkbox"]').click(function(){
+                if($(this).is(":checked")){
+                    count = count+1;
+                    if(count===5){
+                        resolve();
+                    }
                 }
-                else{
+                else if($(this).is(":not(:checked)")){
                     count = count-1;
                     reject();
                 }
-            }
+                console.log(count);
+            }).change();
             });
             promise.
             then(()=>{
-                alert("success");
+                alert("Congrats. 5 Tasks have been Successfully Completed");
             }).
             catch(()=>{
-                alert("failed");
+                alert("Failed to complete 5 tasks");
             })
         }
     }

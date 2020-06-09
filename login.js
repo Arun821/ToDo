@@ -1,14 +1,18 @@
-
-$(document).ready(function(){
-    $('#bt').click(function(){
-        var name = $("#uname").val();
-        var pasword = $("#pass").val();
-
-        if(name!=="Admin" && pasword!=="12345"){
-            alert("Invalid Enrty");
-        }
-        else{
-            location.assign("home.html");
-        }
-    });
-});
+function logi(callback){
+    var username = document.getElementById('uname').value;
+    var upassword = document.getElementById('pass').value;
+    console.log(username);
+    console.log(upassword);
+    if(username=="Admin" && upassword=="12345"){
+        callback();  
+    }
+    else{
+        alert("invalid input");
+    }
+}
+function page(){
+    location.assign("home.html");
+}
+function login(){
+    logi(page);
+}

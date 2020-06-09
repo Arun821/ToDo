@@ -1,0 +1,25 @@
+*{
+    text-decoration: none;
+}
+nav{
+    background-color: rgba(34, 49, 30, 0.829);
+    height: 50px;
+    text-decoration: none;
+    position: relative;
+    width: auto;
+}
+nav ul{
+    position: relative;
+    list-style: none;
+    line-height: 50px;
+    text-decoration: none;
+}
+nav li{
+    display: inline-block;
+    margin: 0 8px;
+    text-decoration: none;
+}
+nav a{
+    text-decoration: none;
+    color: white;
+}

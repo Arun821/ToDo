@@ -1,0 +1,31 @@
+body{
+    background: linear-gradient(to right, red,blue);
+}
+.form-container{
+    margin-top: 200px;
+    text-align: center;
+}
+#bt{
+    font-weight: bolder;
+    width: 100px !important;
+    float: right;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: white;
+}
+#bt:hover{
+    color: white;
+    font-family: 'Architects Daughter', cursive;
+}
+.form-container h1{
+    font-family: 'Metal Mania', cursive;
+    font-size: 5rem;
+    color: cornsilk;
+}
+.form-container input[type=text],input[type=password]{
+    background: transparent;
+    color: white;
+    font-family: 'Noto Serif', serif;
+}

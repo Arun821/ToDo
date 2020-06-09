@@ -1,4 +1,3 @@
-
 var xhr = new XMLHttpRequest();
 xhr.open("get","https://jsonplaceholder.typicode.com/todos" , true);
 xhr.send();
@@ -22,6 +21,29 @@ xhr.onreadystatechange = function(){
             });
             document.getElementById('ul').innerHTML = list;  
             document.getElementById('ul').style.marginTop = "20px";
+            var promise = new Promise((resolve, reject)=>{
+                var count = 0;
+                     if($('input[type="checkbox"]').on('change')){
+                     if($(this).is('checked',true)){
+                     count = count+1;
+                     console.log(count);
+                     if(count===5){
+                         resolve();
+                     }
+                }
+                else{
+                    count = count-1;
+                    reject();
+                }
+            }
+            });
+            promise.
+            then(()=>{
+                alert("success");
+            }).
+            catch(()=>{
+                alert("failed");
+            })
         }
     }
 }
